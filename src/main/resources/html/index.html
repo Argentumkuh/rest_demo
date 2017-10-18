@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="LibraryApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Library</title>
+    <script src="../libs/angular.min.js"></script>
+    <link rel="stylesheet" href="../libs/bootstrap.css">
+    <link rel="stylesheet" href="../libs/bootstrap-theme.css">
+
+    <script src="../script/controller.js"></script>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body ng-controller="LibraryCtrl">
+    <div>
+        <ins>
+            <h2 align="center">My Library</h2>
+        </ins>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-2">
+            <ng-include src="'book_form.html'" ng-show="mode === 'table'"></ng-include>
+        </div>
+
+        <div class="col-md-10">
+            <ng-include src="'book_table.html'" ng-show="mode === 'table'"></ng-include>
+        </div>
+
+        <div class="well">
+            <ng-include src="'pagination.html'" ng-show="mode === 'table'"></ng-include>
+        </div>
+    </div>
+
+    <ng-include src="'book_editor.html'" ng-show="mode === 'editor'"></ng-include>
+</body>
+</html>

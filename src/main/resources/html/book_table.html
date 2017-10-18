@@ -1,0 +1,25 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Book Title</th>
+            <th>Book Description</th>
+            <th>Book Author</th>
+            <th>ISBN</th>
+            <th>Year Of Publication</th>
+            <th>Is Read</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr ng-repeat="book in model">
+            <td>{{book.title}}</td>
+            <td>{{book.description}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.isbn}}</td>
+            <td>{{book.printed}}</td>
+            <td>{{book.readed}}</td>
+            <td><button class="btn btn-block btn-success" ng-click="editBook(book)">Edit Book</button></td>
+            <td><button class="btn btn-danger" ng-click="deleteBook(book)">Delete Book</button></td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,23 @@
+<table class="table" style="margin: 10px;">
+    <thead>
+    <tr>
+        <th>Book Title</th>
+        <th>Book Description</th>
+        <th>ISBN</th>
+        <th>Year Of Publication</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td><input type="text" class="form-control" ng-model="currentBook.title"></td>
+        <td><input type="text" class="form-control" ng-model="currentBook.description"></td>
+        <td><input type="text" class="form-control" ng-model="currentBook.isbn"></td>
+        <td><input type="number" class="form-control" ng-model="currentBook.printed"></td>
+    </tr>
+    </tbody>
+</table>
+
+<button class="btn btn-default" style="margin-left: 20px" ng-click="saveCurrentBook()">Save Changes</button>
+<button class="btn btn-default" ng-click="markAsRead()">Mark As Read</button>
+<button class="btn btn-default" ng-click="returnToTable()">Return</button>

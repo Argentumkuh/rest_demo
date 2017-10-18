@@ -1,0 +1,11 @@
+<div class="btn-group" style="padding: 10px">
+    <div>Page {{pagination.number + 1}}</div>
+    <button class="btn btn-default" ng-click="toPage(0)">First Page</button>
+    <button class="btn btn-default" ng-click="toPage(pagination.number + 1)">Next Page</button>
+    <button class="btn btn-default" ng-click="toPage(pagination.number - 1)">Previous Page</button>
+    <button class="btn btn-default" ng-click="toPage(pagination.totalPages - 1)">Last Page</button>
+    <label>
+        <input type="number" class="form-control" ng-model="pageNumber">
+    </label>
+    <button class="btn btn-default" ng-click="toPage(pageNumber - 1)">To page</button>
+</div>

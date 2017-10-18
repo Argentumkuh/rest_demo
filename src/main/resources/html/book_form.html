@@ -1,0 +1,57 @@
+<div class="well">
+    <form name="bookForm" novalidate ng-submit="saveNewBook(book)">
+        <div class="form-group">
+            <label>
+                Book Title:
+                <input name="bookTitle" type="text" class="form-control"
+                       ng-class="bookForm.$pristine ? 'pristine' : 'dirty'" required ng-model="book.title"/>
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label>
+                Book Description:
+                <input name="bookDescription" type="text" class="form-control"
+                       ng-class="userForm.$pristine ? 'pristine' : 'dirty'" ng-model="book.description"/>
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label>
+                Book Author:
+                <input name="bookAuthor" type="text" class="form-control"
+                       ng-class="bookForm.$pristine ? 'pristine' : 'dirty'" required ng-model="book.author"/>
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label>
+                ISBN:
+                <input name="isbn" type="text" class="form-control"
+                       ng-class="bookForm.$pristine ? 'pristine' : 'dirty'" required ng-model="book.isbn"/>
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label>
+                Year Of Publication:
+                <input name="publicationYear" type="number" class="form-control"
+                       ng-class="bookForm.$pristine ? 'pristine' : 'dirty'" required ng-model="book.printed"/>
+            </label>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block" ng-disabled="bookForm.$invalid">Save
+                Changes
+            </button>
+        </div>
+    </form>
+
+    <label>
+        <input name="findBookByTitle" type="text" class="form-control" ng-model="title"/>
+        <button type="button" class="btn btn-info btn-block" ng-click="findBookByTitle(title)">
+            Find By Title
+        </button>
+    </label>
+
+</div>
